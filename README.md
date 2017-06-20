@@ -4,7 +4,9 @@ A bakend api to run front apps in full JS.
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) installed.
+Make sure you have [Node.js](http://nodejs.org/) and [MongoBD](https://www.mongodb.com/download-center) installed.
+
+Fist run mongod.
 
 ```sh
 $ npm install

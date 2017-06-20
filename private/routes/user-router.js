@@ -32,7 +32,7 @@ module.exports = UserRouter = function (app, multer, mkdirp) {
 
     // create User and send back all users after creation
     app.post('/api/users', function (req, res) {
-
+        console.log('creating account', res.body);
         // create a User, information comes from AJAX request from Angular
         User.create({
             name: req.body.name || '',
@@ -76,7 +76,7 @@ module.exports = UserRouter = function (app, multer, mkdirp) {
             return cb(new Error(req.uploadError));
         }
         // Then check file size not > 4Mo
-        console.log('size check', file.size < 4194304);
+        console.log('size check', file.size); // < 4194304);
         if (file.size >= 4194304) {
             cb(null, false);
             req.uploadError = 'File max size allowed is 4Mo';
@@ -117,8 +117,5 @@ module.exports = UserRouter = function (app, multer, mkdirp) {
             }
         });
     });
-    // application -------------------------------------------------------------
-    app.get('*', function (req, res) {
-        res.sendFile(__dirname + '/public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-    });
+    
 };
