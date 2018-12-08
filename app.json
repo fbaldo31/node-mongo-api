@@ -2,7 +2,7 @@
   "name": "Fred's Node.js MongoDB Api",
   "description": "A Node.js & Express 4 api",
   "repository": "https://github.com/fbaldo31/node-mongo-api",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-getting-started/public/node.svg",
   "keywords": ["node", "express", "mongodb", "mongoose"],
   "image": "heroku/nodejs"
 }
